@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -11,20 +12,21 @@ public class RegistrationPage {
 
     // SelenideElements
 
+    CalendarComponent calendar = new CalendarComponent();
     SelenideElement titleLabel = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
-            genderWrapperInput = $("#genderWrapper"),
+            genderWrapperInput = $("#genterWrapper"),
             userNumberInput = $("#userNumber");
 
     // Actions
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+        titleLabel.shouldHave(text("Student Registration Form"));
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
-        titleLabel.shouldHave(text("Student Registration Form"));
 
         return this;
     }
@@ -39,13 +41,13 @@ public class RegistrationPage {
    //     firstNameInput.click();
    // }
 
-    public RegistrationPage setlastName(String value) {
+    public RegistrationPage setLastName(String value) {
         lastNameInput.setValue(value);
 
         return this;
     }
 
-    public RegistrationPage setuserEmail(String value) {
+    public RegistrationPage setEmail(String value) {
         userEmailInput.setValue(value);
 
         return this;
@@ -59,6 +61,20 @@ public class RegistrationPage {
 
     public RegistrationPage setuserNumber(String value) {
         userNumberInput.setValue(value);
+
+        return this;
+    }
+
+    public RegistrationPage setDateOfBirth(String day, String month, String year) {
+        $("#dateOfBirthInput").click();
+        calendar.setDate("04", "March", "1992");
+
+        return this;
+    }
+
+    public RegistrationPage checkResult(String key, String value) {
+        $(".table-responsive").$(byText(key)).parent()
+                .shouldHave(text(value));
 
         return this;
     }
