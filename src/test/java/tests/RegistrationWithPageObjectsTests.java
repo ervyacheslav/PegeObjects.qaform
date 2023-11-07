@@ -2,9 +2,6 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-
 
 public class RegistrationWithPageObjectsTests extends TestBase {
 
@@ -16,20 +13,14 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 .setEmail("er.vyacheslav2023@gmail.com")
                 .setGender("Male")
                 .setuserNumber("9508628655")
-                .setDateOfBirth("04", "March", "1992");
-
-
-
-
-        $("#subjectsInput").setValue("Computer Science").pressEnter();
-        $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFromClasspath("1.png");
-        $("#currentAddress").setValue("Currect Address");
-        $("#state").click();
-        $("#stateCity-wrapper").$(byText("Rajasthan")).click();
-        $("#city").click();
-        $("#stateCity-wrapper").$(byText("Jaipur")).click();
-        $("#submit").click();
+                .setDateOfBirth("04", "March", "1992")
+                .setSubjects("Computer Science")
+                .setHobby("Sports")
+                .uploadPicture("1.png")
+                .setCurrentAddress("Currect Address")
+                .setState("Rajasthan")
+                .setCity("Jaipur")
+                .clickSubmit();
 
         //$(".modal-dialog").should(appear);
         //$("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
