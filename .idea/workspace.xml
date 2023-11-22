@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43c18669-bee7-413f-b03a-65dce225bc84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TextBoxPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/components/TextBoxCheckResultComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TextBoxTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/components/TableComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/dog.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationWithPageObjectsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationWithPageObjectsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
@@ -65,46 +67,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "pageobjects",
-    "last_opened_file_path": "/Users/vaceslaverohin/IdeaProjects/qa_guru/PageObjects.qaform",
-    "onboarding.tips.debug.path": "/Users/vaceslaverohin/IdeaProjects/qa_guru/PageObjects.qaform/src/main/java/com/er/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;pageobjects&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vaceslaverohin/IdeaProjects/qa_guru/PageObjects.qaform&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/vaceslaverohin/IdeaProjects/qa_guru/PageObjects.qaform/src/main/java/com/er/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TextBoxTests">
-    <configuration name="RegistrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RegistrationWithPageObjectsTests.fillFormTest">
+    <configuration name="PageObjects.qaform [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.RegistrationTest&quot;" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="RegistrationWithPageObjectsTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -179,12 +179,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RegistrationWithPageObjectsTests.fillFormTest" />
+        <item itemvalue="Gradle.PageObjects.qaform [dependencies]" />
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Gradle.TextBoxTests" />
         <item itemvalue="Gradle.RegistrationWithPageObjectsTests" />
-        <item itemvalue="Gradle.RegistrationWithPageObjectsTests.fillFormTest" />
-        <item itemvalue="Gradle.RegistrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699295547207</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added TextBoxTests">
+      <option name="closed" value="true" />
+      <created>1699342974740</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699342974740</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -237,7 +253,8 @@
     <MESSAGE value="added homework" />
     <MESSAGE value="added PageObjects" />
     <MESSAGE value="added PageComponent" />
-    <option name="LAST_COMMIT_MESSAGE" value="added PageComponent" />
+    <MESSAGE value="added TextBoxTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added TextBoxTests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,7 +264,15 @@
           <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/components/TableComponent.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PageObjects_qaform$RegistrationWithPageObjectsTests_fillFormTest.ic" NAME="RegistrationWithPageObjectsTests.fillFormTest Coverage Results" MODIFIED="1700613625836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

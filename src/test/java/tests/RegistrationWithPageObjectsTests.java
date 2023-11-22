@@ -7,28 +7,29 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
     @Test
     void fillFormTest() {
-        registrationPage.openPage()
-                .setFirstName("Vyacheslav")
-                .setLastName("Erokhin")
-                .setEmail("er.vyacheslav2023@gmail.com")
-                .setGender("Male")
-                .setuserNumber("9508628655")
-                .setDateOfBirth("04", "March", "1992")
-                .setSubjects("Computer Science")
-                .setHobby("Sports")
-                .uploadPicture("1.png")
-                .setCurrentAddress("Currect Address")
-                .setState("Rajasthan")
-                .setCity("Jaipur")
-                .clickSubmit();
+        registrationPage. openPage().
+                setFirstName(testData.randomName).
+                setLastName(testData.randomLastName).
+                setEmail(testData.randomEmail).
+                setGender(testData.randomGender).
+                setuserNumber(testData.randomNumber).
+                setDateOfBirth(testData.randomDay, testData.randomMonth, testData.randomYear).
+                setSubjects(testData.randomSubject).
+                setHobby(testData.randomHobbi).
+                uploadPicture(testData.randomPicture).
+                setCurrentAddress(testData.randomAdress).
+                setState(testData.randomState).
+                setCity(testData.randomStateCity).
+                clickSubmit().
+                resultOfTable(testData.randomName+ " " +testData.randomLastName).
+                resultOfTable(testData.randomGender).
+                resultOfTable(testData.randomNumber).
+                resultOfTable(testData.randomDay+ " " +testData.randomMonth+ "," +testData.randomYear).
+                resultOfTable(testData.randomSubject).
+                resultOfTable(testData.randomHobbi).
+                resultOfTable(testData.randomPicture).
+                resultOfTable(testData.randomAdress).
+                resultOfTable(testData.randomState+" "+testData.randomStateCity);
 
-        //$(".modal-dialog").should(appear);
-        //$("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        //$(".table-responsive").shouldHave(text("Vyacheslav"), text("Erokhin"),
-        //        text("er.vyacheslav2023@gmail.com"), text("9508628655"));
-
-        registrationPage.checkResult("Student Name", "Vyacheslav Erokhin")
-                .checkResult("Student Email", "er.vyacheslav2023@gmail.com")
-                .checkResult("Mobile", "9508628655");
     }
 }

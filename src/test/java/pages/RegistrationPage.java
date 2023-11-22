@@ -2,17 +2,18 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
+import pages.components.TableComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
 
     // SelenideElements
 
     CalendarComponent calendar = new CalendarComponent();
+    TableComponent table=new TableComponent();
     SelenideElement titleLabel = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
@@ -44,10 +45,6 @@ public class RegistrationPage {
         return this;
     }
 
-  //  public void clikFirstName() {   // not used
-   //     firstNameInput.click();
-   // }
-
     public RegistrationPage setLastName(String value) {
         lastNameInput.setValue(value);
 
@@ -74,7 +71,7 @@ public class RegistrationPage {
 
     public RegistrationPage setDateOfBirth(String day, String month, String year) {
         $("#dateOfBirthInput").click();
-        calendar.setDate("04", "March", "1992");
+        calendar.setDate(day, month, year);
 
         return this;
     }
@@ -110,13 +107,15 @@ public class RegistrationPage {
 
         return this;
     }
-    public void clickSubmit() {
+    public RegistrationPage clickSubmit(){
         submitButton.click();
+
+        return this;
     }
 
-        public RegistrationPage checkResult(String key, String value) {
-        $(".table-responsive").$(byText(key)).parent()
-                .shouldHave(text(value));
+
+    public RegistrationPage resultOfTable(String value){
+        table.checkResultTable(value);
 
         return this;
     }
