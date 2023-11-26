@@ -10,8 +10,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
 
-    // SelenideElements
-
     CalendarComponent calendar = new CalendarComponent();
     TableComponent table=new TableComponent();
     SelenideElement titleLabel = $(".practice-form-wrapper"),
@@ -28,7 +26,6 @@ public class RegistrationPage {
             cityInput = $("#city"),
             stateAndCity = $("#stateCity-wrapper"),
             submitButton = $("#submit");
-    // Actions
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
