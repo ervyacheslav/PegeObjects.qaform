@@ -22,6 +22,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 setCity(testData.randomStateCity).
                 clickSubmit().
                 resultOfTable(testData.randomName+ " " +testData.randomLastName).
+                resultOfTable(testData.randomEmail).
                 resultOfTable(testData.randomGender).
                 resultOfTable(testData.randomNumber).
                 resultOfTable(testData.randomDay+ " " +testData.randomMonth+ "," +testData.randomYear).
